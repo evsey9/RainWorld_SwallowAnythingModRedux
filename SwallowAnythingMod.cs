@@ -1,5 +1,11 @@
 ﻿using BepInEx;
 
+using System.Security;
+using System.Security.Permissions;
+
+[module: UnverifiableCode]
+[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
+
 namespace SwallowAnythingMod
 {
     [BepInPlugin("drwoof.swallowanythingmod", "Swallow Anything Mod", "1.3.0")]
